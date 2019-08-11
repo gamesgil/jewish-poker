@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { PokerService } from './poker.service';
+import { ArvincaService } from './arvinca.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PokerService } from './poker.service';
     MatInputModule
   ],
   providers: [
-    PokerService
+    PokerService,
+    ArvincaService
   ],
   bootstrap: [AppComponent]
 })

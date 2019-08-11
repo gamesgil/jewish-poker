@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Validators, FormControl, FormGroup } from '@angular/forms';
 import { PokerService, TURN, STATE } from './poker.service';
 import { state } from '@angular/animations';
+import { ArvincaService } from './arvinca.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,9 @@ import { state } from '@angular/animations';
 export class AppComponent {
   title = 'JewishPoker';
 
-  constructor(private pokerService: PokerService) { }
+  constructor(private pokerService: PokerService, private arvinca: ArvincaService) { 
+    
+  }
 
   onSubmit() {
     this.pokerService.turn = TURN.OTHER;
